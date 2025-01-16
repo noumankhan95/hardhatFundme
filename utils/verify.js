@@ -8,11 +8,7 @@ const verify = async (address, args) => {
             args
         })
     } catch (e) {
-        if (e.toLowerCase().includes("already verified")) {
-            console.log("Verified Already")
-        } else {
-            console.log(e)
-        }
+        console.log(e)
     }
 }
 

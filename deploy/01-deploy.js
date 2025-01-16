@@ -14,7 +14,7 @@ async function deployFunction({ getNamedAccounts, deployments }) {
     }
 
     const fundMe = await deploy("FundMe", {
-        from: deployer, args: [ethusdPriceFeedAddress], log: true
+        from: deployer, args: [ethusdPriceFeedAddress], log: true, waitConfirmations: network.config.blockConfirmations || 1
     })
 
     if (!developmentChains.includes(network.name)) {
